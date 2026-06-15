@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portal Edukacyjny KOI – wiedza o bólu, dolegliwościach i terapiach</title>
+<meta name="description" content="Portal Edukacyjny KOI – rzetelna wiedza o bólu i jego leczeniu: dolegliwości bólowe, terapie przeciwbólowe, fizjoterapia i medycyna paliatywna." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<link rel="stylesheet" id="silktide-consent-manager-css" href="silktide-consent-manager.css">
+<style>
+/* Cookie banner używa wewnętrznego <footer> – nie pozwól, by dziedziczył kolory stopki serwisu */
+#silktide-wrapper footer,
+#silktide-banner footer,
+#silktide-modal footer {
+  background: transparent !important;
+  border-top: none !important;
+  color: inherit !important;
+  padding: 0 !important;
+}
+</style>
+<script src="silktide-consent-manager.js"></script>
+<script>
+silktideCookieBannerManager.updateCookieBannerConfig({
+  background: {
+    showBackground: true
+  },
+  cookieIcon: {
+    position: "bottomLeft"
+  },
+  cookieTypes: [
+    {
+      id: "funkcjonalne_niezb_dne_pliki_cookie",
+      name: "Funkcjonalne (niezbędne pliki cookie)",
+      description: "<p>Te pliki cookie są niezbędne do prawidłowego funkcjonowania strony internetowej i nie można ich wyłączyć. Pomagają w takich rzeczach jak logowanie i ustawianie preferencji prywatności.<br></p>",
+      required: true,
+  onAccept: function() {
+        console.log('Add logic for the required Necessary here');
+      }
+    },
+    {
+      id: "analityczne_i_wydajno_ciowe_opjonalne",
+      name: "Analityczne i wydajnościowe (opjonalne)",
+      description: "<p>Te pliki cookie pomagają nam ulepszać witrynę poprzez śledzenie, które strony są najbardziej popularne i jak odwiedzający poruszają się po witrynie.<br></p>",
+      required: false,
+      onAccept: function() {
+        gtag('consent', 'update', {
+          analytics_storage: 'granted',
+        });
+        dataLayer.push({
+          'event': 'consent_accepted_analityczne_i_wydajno_ciowe_opjonalne',
+        });
+      },
+      onReject: function() {
+        gtag('consent', 'update', {
+          analytics_storage: 'denied',
+        });
+      }
+    },
+    {
+      id: "marketing_opcjonalne",
+      name: "Marketing (opcjonalne)",
+      description: "<p>Te pliki cookie zapewniają dodatkowe funkcje i personalizację, w tym personalizację reklam. Mogą być ustawiane przez nas lub przez partnerów, z których usług korzystamy.<br></p>",
+      required: false,
+      onAccept: function() {
+        gtag('consent', 'update', {
+          ad_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted',
+        });
+        dataLayer.push({
+          'event': 'consent_accepted_marketing_opcjonalne',
+        });
+      },
+      onReject: function() {
+        gtag('consent', 'update', {
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+        });
+      }
+    }
+  ],
+  text: {
+    banner: {
+      description: "<p>Ta strona korzysta z plików cookies w zakresie opisanym w <a href=\"polityka-prywatnosci.html\" target=\"_blank\">polityce prywatności</a>, które pomagają jej funkcjonować i śledzić sposób interakcji z &nbsp;nią. Dzięki temu możemy zapewnić lepszą i spersonalizowaną obsługęw tym personalizację reklam.<br></p>",
+      acceptAllButtonText: "Zaakceptuj wszystkie",
+      acceptAllButtonAccessibleLabel: "Zaakceptuj wszystkie cookies",
+      rejectNonEssentialButtonText: "Odrzuć wszystkie",
+      rejectNonEssentialButtonAccessibleLabel: "Odrzuć wszystkie cookies",
+      preferencesButtonText: "Ustawienia",
+      preferencesButtonAccessibleLabel: "Ustaw preferencje"
+    },
+    preferences: {
+      title: "Zgoda na pliki cookie",
+      description: "<p>Szanujemy Twoje prawo do prywatności. Możesz nie zezwolić na niektóre rodzaje plików cookie. Twoje preferencje dotyczące plików cookie będą miały zastosowanie na całej naszej stronie internetowej.</p>",
+      creditLinkText: " ",
+      creditLinkAccessibleLabel: " "
+    }
+  },
+  position: {
+    banner: "bottomCenter"
+  }
+});
+</script>
+
+
+<!-- <script src="https://cdn.userway.org/widget.js" data-account="Y2BF1djkqK"> -->
+<!-- </script> -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PFZMT3Q');
+</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G6GJDHNJX8">
+</script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G6GJDHNJX8');
+</script>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+
+<div class="top-stripe"></div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="header">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo" aria-label="Portal Edukacyjny KOI">
+      <img src="images/KOI_logo.png" alt="KOI Centrum Leczenia Bólu" class="logo-img">
+    </a>
+
+    <nav>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Start</a></li>
+        <li class="has-sub"><a href="index.html#dolegliwosci-bolowe">Dolegliwości</a>
+          <ul class="sub">
+            <li class="has-sub2"><a href="dolegliwosci/kregoslup-plecy.html">Kręgosłup i plecy</a>
+              <ul class="sub2">
+                <li><a href="dolegliwosci/bol-kregoslupa.html">Ból kręgosłupa</a></li>
+                <li><a href="dolegliwosci/rwa-kulszowa.html">Rwa kulszowa</a></li>
+                <li><a href="dolegliwosci/przepuklina-kregoslupa.html">Przepuklina kręgosłupa</a></li>
+                <li><a href="dolegliwosci/dyskopatia.html">Choroby krążków międzykręgowych (dyskopatia)</a></li>
+                <li><a href="dolegliwosci/rwa-udowa.html">Rwa udowa</a></li>
+                <li><a href="dolegliwosci/kregozmyk.html">Kręgozmyk</a></li>
+                <li><a href="dolegliwosci/bol-plecow.html">Ból pleców</a></li>
+                <li><a href="dolegliwosci/bol-szyi.html">Ból szyi (odcinek szyjny kręgosłupa)</a></li>
+                <li><a href="dolegliwosci/bole-korzeniowe.html">Bóle korzeniowe</a></li>
+              </ul>
+            </li>
+            <li class="has-sub2"><a href="dolegliwosci/glowa-twarz.html">Głowa i twarz</a>
+              <ul class="sub2">
+                <li><a href="dolegliwosci/bol-glowy.html">Ból głowy</a></li>
+                <li><a href="dolegliwosci/klasterowy-bol-glowy.html">Klasterowy ból głowy</a></li>
+                <li><a href="dolegliwosci/migrena.html">Migrena</a></li>
+                <li><a href="dolegliwosci/bol-twarzy.html">Ból twarzy</a></li>
+                <li><a href="dolegliwosci/porazenie-nerwu-twarzowego.html">Porażenie nerwu twarzowego</a></li>
+                <li><a href="dolegliwosci/neuralgia-nerwu-trojdzielnego.html">Neuralgia nerwu trójdzielnego</a></li>
+                <li><a href="dolegliwosci/napieciowy-bol-glowy.html">Napięciowy ból głowy</a></li>
+                <li><a href="dolegliwosci/popunkcyjne-bole-glowy.html">Popunkcyjne bóle głowy</a></li>
+              </ul>
+            </li>
+            <li class="has-sub2"><a href="dolegliwosci/stawy-miesnie-konczyny.html">Stawy, mięśnie, kończyny</a>
+              <ul class="sub2">
+                <li><a href="dolegliwosci/bole-reumatyczne.html">Bóle reumatyczne</a></li>
+                <li><a href="dolegliwosci/bole-stawow.html">Bóle stawów</a></li>
+                <li><a href="dolegliwosci/bole-konczyn.html">Bóle kończyn</a></li>
+                <li><a href="dolegliwosci/zespol-ciesni-nadgarstka.html">Zespół cieśni nadgarstka</a></li>
+                <li><a href="dolegliwosci/bol-barku.html">Ból barku</a></li>
+                <li><a href="dolegliwosci/bol-kolan.html">Ból kolan</a></li>
+                <li><a href="dolegliwosci/bark-zamrozony.html">Bark zamrożony</a></li>
+                <li><a href="dolegliwosci/bole-miesni.html">Bóle mięśni</a></li>
+                <li><a href="dolegliwosci/fibromialgia.html">Fibromialgia</a></li>
+                <li><a href="dolegliwosci/lokiec-tenisisty-i-golfisty.html">Łokieć tenisisty i golfisty</a></li>
+                <li><a href="dolegliwosci/spastycznosc-przykurcze-leczenie.html">Przykurcze, spastyczność, klonus</a></li>
+                <li><a href="dolegliwosci/rany-przewlekle.html">Rany przewlekłe</a></li>
+              </ul>
+            </li>
+            <li class="has-sub2"><a href="dolegliwosci/urazy-operacje-nowotwory.html">Urazy, operacje, nowotwory</a>
+              <ul class="sub2">
+                <li><a href="dolegliwosci/bol-pooperacyjny-leczenie.html">Ból pooperacyjny</a></li>
+                <li><a href="dolegliwosci/bol-po-urazie.html">Ból po urazie</a></li>
+                <li><a href="dolegliwosci/bol-fantomowy.html">Ból fantomowy</a></li>
+                <li><a href="dolegliwosci/bol-nowotworowy.html">Ból nowotworowy</a></li>
+              </ul>
+            </li>
+            <li class="has-sub2"><a href="dolegliwosci/uklad-nerwowy.html">Układ nerwowy</a>
+              <ul class="sub2">
+                <li><a href="dolegliwosci/bol-w-chorobach-neurologicznych.html">Ból w chorobach neurologicznych</a></li>
+                <li><a href="dolegliwosci/polineuropatia.html">Polineuropatia</a></li>
+                <li><a href="dolegliwosci/nerwobole.html">Nerwobóle</a></li>
+                <li><a href="dolegliwosci/bole-korzeniowe.html">Bóle korzeniowe</a></li>
+                <li><a href="dolegliwosci/neuralgia-polpascowa.html">Neuralgia półpaścowa</a></li>
+                <li><a href="dolegliwosci/neuralgia-nerwu-trojdzielnego.html">Neuralgia nerwu trójdzielnego</a></li>
+                <li><a href="dolegliwosci/neuropatia-cukrzycowa.html">Neuropatia cukrzycowa</a></li>
+                <li><a href="dolegliwosci/fibromialgia.html">Fibromialgia</a></li>
+                <li><a href="dolegliwosci/bol-po-udarze-mozgu.html">Ból po udarze mózgu</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="has-sub"><a href="index.html#terapia">Terapia</a>
+          <ul class="sub">
+            <li><a href="terapia/blokady-przeciwbolowe.html">Blokady przeciwbólowe</a></li>
+            <li><a href="terapia/farmakoterapia-przeciwbolowa.html">Farmakoterapia przeciwbólowa</a></li>
+            <li><a href="terapia/fizjoterapia-terapia-manualna.html">Fizjoterapia i terapia manualna</a></li>
+            <li><a href="terapia/kolagen-kwas-hialuronowy.html">Kolagen i kwas hialuronowy</a></li>
+            <li><a href="terapia/kriolezja.html">Kriolezja</a></li>
+            <li><a href="terapia/leczenie-ran-przewleklych.html">Leczenie ran przewlekłych</a></li>
+            <li><a href="terapia/medycyna-paliatywna.html">Medycyna paliatywna</a></li>
+            <li><a href="terapia/psychiatra.html">Pomoc psychiatryczna</a></li>
+            <li><a href="terapia/termolezja.html">Termolezja</a></li>
+            <li><a href="terapia/wlewy-dozylne.html">Wlewy dożylne</a></li>
+          </ul>
+        </li>
+        <li class="has-sub"><a href="blog.html">Blog</a>
+          <ul class="sub">
+            <li><a href="blog/bol-przewlekly-w-polsce-cicha-epidemia-ktora-dotyka-miliony.html">Ból przewlekły w Polsce</a></li>
+            <li><a href="blog/fibromialgia-gdy-boli-cale-cialo.html">Fibromialgia</a></li>
+            <li><a href="blog/jak-zlagodzic-bol-po-udarze.html">Jak złagodzić ból po udarze?</a></li>
+            <li><a href="blog/leczenie-choroby-zwyrodnieniowej-kolana-zastrzykami-z-glukozy.html">Leczenie choroby zwyrodnieniowej kolana zastrzykami z glukozy</a></li>
+            <li><a href="blog/leczenie-popunkcyjnych-bolow-glowy.html">Leczenie popunkcyjnych bólów głowy</a></li>
+            <li><a href="blog/rodzaje-blokad-przeciwbolowych.html">Rodzaje blokad przeciwbólowych</a></li>
+            <li><a href="blog/schorzenia-kregoslupa-powszechny-problem-xxi-wieku.html">Schorzenia kręgosłupa</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="start">
+  <div class="hero-media">
+    <img class="hero-img" src="images/hero_banner.webp" alt="Portal Edukacyjny KOI – wiedza o bólu i jego leczeniu" />
+  </div>
+  <div class="hero-content">
+    <h1>Zrozum swój ból — wiedza, która pomaga odzyskać sprawność i radość życia</h1>
+  </div>
+</section>
+
+<!-- ===================== ABOUT SECTION ===================== -->
+<section id="dolegliwosci">
+  <div class="container">
+    <div class="about">
+      <div>
+        <h2>Portal Edukacyjny KOI</h2>
+        <h3 style="margin-top: 28px;">Czym jest ten portal?</h3>
+        <p>
+          Gromadzimy <strong>rzetelną, przystępnie opisaną wiedzę</strong> o bólu różnego pochodzenia,
+          metodach jego leczenia oraz <a href="terapia/medycyna-paliatywna.html" class="inline-link">medycynie paliatywnej</a>.
+        </p>
+        <p>
+          Wyjaśniamy różne rodzaje terapii przeciwbólowej, m.in.:
+          <a href="terapia/farmakoterapia-przeciwbolowa.html" class="inline-link">farmakoterapię</a>, <a href="terapia/blokady-przeciwbolowe.html" class="inline-link">blokady przeciwbólowe</a>,
+          <a href="terapia/kriolezja.html" class="inline-link">kriolezję</a>, <a href="terapia/wlewy-dozylne.html" class="inline-link">wlewy dożylne</a> oraz
+          <a href="terapia/kolagen-kwas-hialuronowy.html" class="inline-link">kolagen i kwas hialuronowy</a>.
+        </p>
+        <p>
+          Opisujemy także <a href="terapia/leczenie-ran-przewleklych.html" class="inline-link">leczenie ran przewlekłych</a>,
+          <a href="terapia/fizjoterapia-terapia-manualna.html" class="inline-link">fizjoterapię i terapię manualną</a> oraz
+          <a href="terapia/psychiatra.html" class="inline-link">wsparcie psychiatryczne w bólu</a>.
+        </p>
+      </div>
+      <div class="pain-diagram" aria-hidden="true">
+        <svg viewBox="0 0 460 420" xmlns="http://www.w3.org/2000/svg">
+          <!-- concentric rings -->
+          <circle cx="230" cy="210" r="180" fill="#fbd8d8" opacity=".55"/>
+          <circle cx="230" cy="210" r="130" fill="#f5a7a7" opacity=".65"/>
+          <circle cx="230" cy="210" r="90"  fill="#e76060" opacity=".85"/>
+          <circle cx="230" cy="210" r="55"  fill="#c8201a"/>
+          <text x="230" y="220" text-anchor="middle" font-family="Inter" font-size="26" font-weight="700" fill="#fff">ból</text>
+          <!-- labels -->
+          <g font-family="Inter" font-size="18" font-weight="600" fill="#1F2A37">
+            <text x="200" y="20">przewlekły</text>
+            <text x="40"  y="80">pourazowy</text>
+            <text x="0"   y="180">kończyn</text>
+            <text x="0"   y="260">mięśni</text>
+            <text x="30"  y="370">nowotworowy</text>
+            <text x="320" y="80">kręgosłupa</text>
+            <text x="370" y="170">głowy</text>
+            <text x="340" y="260">reumatyczny</text>
+            <text x="310" y="370">pooperacyjny</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="cta-center">
+      <a href="#dolegliwosci" class="btn btn-primary">Poznaj bazę wiedzy</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INTRO TEXT ===================== -->
+<section class="specialists">
+  <div class="container">
+    <div class="about-text-wrap">
+      <p>
+        W Portalu Edukacyjnym KOI rozumiemy, jak destrukcyjny wpływ na życie może mieć ból – zarówno ten ostry, nagły,
+        jak i przewlekły, trwający miesiącami czy latami. <strong>Leczenie bólu</strong> to interdyscyplinarna dziedzina
+        medycyny, która koncentruje się na diagnozowaniu, łagodzeniu i kontrolowaniu różnego rodzaju dolegliwości bólowych.
+      </p>
+      <p>
+        Z pomocy specjalistów <strong>leczenia bólu</strong> warto skorzystać, gdy ból utrudnia codzienne funkcjonowanie,
+        sen, pracę, aktywność fizyczną lub negatywnie wpływa na samopoczucie. Istotą skutecznego leczenia bólu jest
+        indywidualne podejście do pacjenta, uwzględniające przyczynę bólu, jego charakter oraz ogólny stan zdrowia.
+      </p>
+      <p>
+        Naszym celem jest nie tylko uśmierzenie bólu, ale przede wszystkim poprawa jakości życia pacjenta i przywrócenie
+        mu sprawności.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STATS ===================== -->
+<section class="stats">
+  <div class="stats-wrap">
+    <p>
+      W Polsce szacuje się że około <strong>27%</strong> dorosłych Polaków cierpi na <strong>ból przewlekły.</strong>
+      Przekłada się to na około <strong>8,5 miliona</strong> osób. W grupie osób starszych ten odsetek jest znacznie wyższy.
+      U osób powyżej 65. roku życia ból przewlekły dotyka nawet <strong>50–55%</strong> populacji. Ważne jest, aby nie
+      bagatelizować problemu i szukać profesjonalnej pomocy, która może znacząco poprawić jakość życia.
+    </p>
+    <p>
+      Absolutnym „królem" dolegliwości pozostaje <a href="#" class="inline-link">kręgosłup</a>, szczególnie w odcinku
+      lędźwiowym i szyjnym. Jest to często bolesna cena, jaką płacimy za siedzący tryb życia i brak odpowiedniej dawki
+      ruchu. Tuż za nim plasują się <a href="#" class="inline-link">bóle stawów</a> (głównie kolanowych i biodrowych)
+      wynikające ze zmian zwyrodnieniowych oraz uciążliwe, nawracające
+      <a href="#" class="inline-link">migreny i napięciowe bóle głowy</a>, które potrafią wyłączyć pacjenta z życia na
+      wiele dni.
+    </p>
+    <p>Coraz częściej specjaliści spotykają się także z:</p>
+    <ul>
+      <li><strong>Bólem neuropatycznym:</strong> (np. <a href="#" class="inline-link">rwa kulszowa</a>,
+        <a href="#" class="inline-link">neuralgia po półpaścu</a> czy
+        <a href="#" class="inline-link">polineuropatia cukrzycowa</a>), który pacjenci opisują jako pieczenie lub rażenie
+        prądem.</li>
+      <li><strong><a href="#" class="inline-link">Bólami nowotworowymi</a>:</strong> wymagającymi precyzyjnego ustawienia
+        silnych leków.</li>
+      <li><strong>Zespołami bólu powięziowego:</strong> objawiającymi się bolesnymi „spięciami" mięśni.</li>
+    </ul>
+    <p style="margin-top: 18px;">
+      Choć przyczyny są różne, wspólnym mianownikiem wizyt jest zazwyczaj moment, w którym standardowe leki dostępne bez
+      recepty przestają wystarczać, a ból z sygnału ostrzegawczego zmienia się w uciążliwą codzienność.
+    </p>
+  </div>
+</section>
+
+<!-- ===================== AILMENTS GRID ===================== -->
+<section class="ailments" id="dolegliwosci-bolowe">
+  <div class="container">
+    <h2>Dolegliwości bólowe</h2>
+    <div class="ailment-grid">
+      <a href="dolegliwosci/kregoslup-plecy.html" class="ailment-card">
+        <img src="images/kregoslup.webp" alt="Kręgosłup i plecy" loading="lazy">
+        <span class="label">Kręgosłup i plecy</span>
+      </a>
+      <a href="dolegliwosci/glowa-twarz.html" class="ailment-card">
+        <img src="images/glowa.webp" alt="Głowa i twarz" loading="lazy">
+        <span class="label">Głowa i twarz</span>
+      </a>
+      <a href="dolegliwosci/stawy-miesnie-konczyny.html" class="ailment-card">
+        <img src="images/stawy.webp" alt="Stawy, mięśnie, kończyny" loading="lazy">
+        <span class="label">Stawy, mięśnie, kończyny</span>
+      </a>
+      <a href="dolegliwosci/urazy-operacje-nowotwory.html" class="ailment-card">
+        <img src="images/urazy.webp" alt="Urazy, operacje, nowotwory" loading="lazy">
+        <span class="label">Urazy, operacje, nowotwory</span>
+      </a>
+      <a href="dolegliwosci/uklad-nerwowy.html" class="ailment-card">
+        <img src="images/choroby.webp" alt="Neuralgie i układ nerwowy" loading="lazy">
+        <span class="label">Neuralgie i układ nerwowy</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AILMENT DETAILS ===================== -->
+<section class="content-block">
+  <div class="content-narrow">
+    <p>
+      Portal Edukacyjny KOI w przystępny sposób przedstawia wszechstronne podejście do <strong>terapii bólu</strong>.
+      W KOI opisujemy szeroki wachlarz metod stosowanych w łagodzeniu bólu przewlekłego, jakiego doświadczają osoby
+      borykające się z różnymi problemami zdrowotnymi.
+    </p>
+    <p>
+      Opisujemy takie dolegliwości bólowe jak: <strong>bóle kręgosłupa i pleców, bóle głowy i twarzy, bóle kończyn,
+      stawów i mięśni, bóle po urazach i operacjach, bóle nowotworowe, <a href="#" class="inline-link">bóle związane
+      z układem nerwowym</a></strong>, i inne.
+    </p>
+    <p>
+      Tłumaczymy, że w leczeniu bólu liczy się nie tylko doraźne uśmierzenie cierpienia, ale przede wszystkim <strong>identyfikacja źródła
+      bólu</strong> oraz przywrócenie pacjentowi pełnej sprawności i komfortu życia.
+    </p>
+
+    <h3>Bóle kręgosłupa i pleców</h3>
+    <p>To jedna z najczęstszych przyczyn wizyt w gabinetach. Wyjaśniamy, jak leczy się stany ostre i przewlekłe, takie jak:</p>
+    <ul>
+      <li><strong><a href="#" class="inline-link">Dyskopatia i rwa kulszowa</a>:</strong> leczenie ucisków na korzenie nerwowe.</li>
+      <li><strong>Zmiany zwyrodnieniowe kręgów:</strong> terapia stanów zapalnych w obrębie stawów międzywyrostkowych.</li>
+      <li><strong>Przeciążenia mięśniowe:</strong> ból wynikający z siedzącego trybu życia lub wad postawy.</li>
+    </ul>
+
+    <h3>Bóle głowy i twarzy</h3>
+    <p>Opisujemy, jak diagnozuje się i leczy dolegliwości, które często wyłączają pacjentów z codziennego funkcjonowania:</p>
+    <ul>
+      <li><strong><a href="#" class="inline-link">Migreny</a>:</strong> profilaktyka i przerywanie napadów bólu.</li>
+      <li><strong><a href="#" class="inline-link">Napięciowe bóle głowy</a>:</strong> związane ze stresem i napięciem mięśni szyi.</li>
+      <li><strong><a href="#" class="inline-link">Neuralgia nerwu trójdzielnego</a>:</strong> intensywne, prądujące bóle twarzy.</li>
+    </ul>
+
+    <h3>Bóle kończyn, stawów i mięśni</h3>
+    <p>Wyjaśniamy, jak leczy się ból wynikający ze zużycia tkanek oraz procesów zapalnych:</p>
+    <ul>
+      <li><strong><a href="#" class="inline-link">Choroba zwyrodnieniowa stawów</a>:</strong> biodrowych, kolanowych i barkowych.</li>
+      <li><strong>Zespoły przeciążeniowe:</strong> np. „łokieć tenisisty" czy zapalenie rozcięgna podeszwowego.</li>
+      <li><strong><a href="#" class="inline-link">Bóle reumatyczne</a>:</strong> wsparcie w przewlekłych stanach zapalnych układu ruchu.</li>
+    </ul>
+
+    <h3>Bóle neuropatyczne (układ nerwowy)</h3>
+    <p>Ból wynikający z uszkodzenia lub dysfunkcji układu nerwowego, często opisywany jako pieczenie, mrowienie lub kłucie:</p>
+    <ul>
+      <li><strong><a href="#" class="inline-link">Polineuropatie</a>:</strong> np. cukrzycowa.</li>
+      <li><strong><a href="#" class="inline-link">Neuralgie półpaścowe</a>:</strong> ból utrzymujący się po wygojeniu zmian skórnych.</li>
+      <li><strong><a href="#" class="inline-link">Zespoły ucisku</a>:</strong> np. zespół cieśni nadgarstka.</li>
+    </ul>
+
+    <h3>Bóle nowotworowe</h3>
+    <p>W opiece nad pacjentem onkologicznym priorytetem jest <strong>maksymalizacja komfortu życia</strong>. W leczeniu stosuje się
+      drabinę analgetyczną WHO, dostosowując dawki leków do indywidualnych potrzeb pacjenta, minimalizując jednocześnie
+      skutki uboczne.</p>
+
+    <h3>Bóle po urazach i operacjach</h3>
+    <p>Opisujemy, jak wspiera się proces rekonwalescencji, m.in. w przypadku:</p>
+    <ul>
+      <li><strong><a href="#" class="inline-link">Ból poamputacyjny i fantomowy</a>.</strong></li>
+      <li><strong>Zrosty i blizny:</strong> ograniczające ruchomość i powodujące dyskomfort.</li>
+      <li><strong><a href="#" class="inline-link">Bóle po złamaniach</a>:</strong> wsparcie w powrocie do pełnej mobilności.</li>
+    </ul>
+
+    <p style="margin-top: 24px;">
+      Leczenie bólu prowadzą wykwalifikowani specjaliści, którzy posiadają wiedzę i doświadczenie związane
+      z <strong>terapią bólu</strong>. Skuteczne leczenie bólu opiera się na zrozumieniu i uwzględnieniu indywidualnych
+      potrzeb pacjenta. W Portalu Edukacyjnym KOI wyjaśniamy, jak specjaliści dobierają odpowiednie metody, tak aby
+      leczenie było bezpieczne i skuteczne, korzystając z najnowszych osiągnięć medycyny. Wszystko to ma na celu
+      <strong>złagodzenie bólu</strong> i poprawę jakości życia, przy minimalizacji negatywnych skutków ubocznych.
+    </p>
+  </div>
+</section>
+
+<!-- ===================== METHODS GRID ===================== -->
+<section class="methods" id="terapia">
+  <div class="container">
+    <h2>Metody terapii</h2>
+    <div class="method-grid">
+      <a href="terapia/farmakoterapia-przeciwbolowa.html" class="method-card m-pharma"><div class="bg"></div><span class="label">Farmakoterapia<br/>przeciwbólowa</span></a>
+      <a href="terapia/blokady-przeciwbolowe.html" class="method-card m-block"><div class="bg"></div><span class="label">Blokady<br/>przeciwbólowe</span></a>
+      <a href="terapia/kriolezja.html" class="method-card m-cryo"><div class="bg"></div><span class="label">Kriolezja<br/>(mrożenie nerwów)</span></a>
+      <a href="terapia/termolezja.html" class="method-card m-thermo"><div class="bg"></div><span class="label">Termolezja</span></a>
+      <a href="terapia/kolagen-kwas-hialuronowy.html" class="method-card m-collagen"><div class="bg"></div><span class="label">Kolagen i kwas<br/>hialuronowy</span></a>
+      <a href="terapia/wlewy-dozylne.html" class="method-card m-iv"><div class="bg"></div><span class="label">Wlewy dożylne</span></a>
+      <a href="terapia/psychiatra.html" class="method-card m-psych"><div class="bg"></div><span class="label">Pomoc psychiatryczna</span></a>
+      <a href="terapia/leczenie-ran-przewleklych.html" class="method-card m-wounds"><div class="bg"></div><span class="label">Leczenie ran<br/>przewlekłych</span></a>
+      <a href="terapia/fizjoterapia-terapia-manualna.html" class="method-card m-physio"><div class="bg"></div><span class="label">Fizjoterapia i terapia<br/>manualna</span></a>
+      <a href="terapia/medycyna-paliatywna.html" class="method-card m-palliative"><div class="bg"></div><span class="label">Medycyna paliatywna</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== METHOD DETAILS ===================== -->
+<section class="content-block method-detail">
+  <div class="content-narrow">
+    <p>
+      Istnieje wiele metod <strong>leczenia bólu</strong>, w zależności od przyczyny i stopnia nasilenia pozwalających na
+      uzyskanie znaczącej poprawy. Leczenie bólu może być skuteczne dzięki łączeniu różnych metod, takich jak leki
+      przeciwbólowe, metody naturalne czy też specjalistyczne terapie. Ważne jest aby nie prowadzić samodzielnego
+      leczenia, a do terapii podchodzić w sposób kompleksowy, po konsultacji z lekarzem specjalistą, aby uniknąć skutków
+      ubocznych.
+    </p>
+    <p>
+      W Portalu Edukacyjnym KOI opisujemy podejście oparte na <strong>medycynie personalizowanej</strong>. Ból ma wiele twarzy,
+      dlatego metody dobiera się tak, aby uderzały precyzyjnie w jego źródło, a nie tylko maskowały objawy. Przedstawiamy
+      następujące metody leczenia, m.in.:
+      <a href="#" class="inline-link">farmakoterapia</a>, <a href="#" class="inline-link">blokady przeciwbólowe</a>,
+      <a href="#" class="inline-link">kriolezja</a>, <a href="#" class="inline-link">termolezja</a>,
+      <a href="#" class="inline-link">wlewy dożylne</a>, <a href="#" class="inline-link">kolagen</a>,
+      <a href="#" class="inline-link">kwas hialuronowy</a>.
+    </p>
+
+    <h3><a href="#" class="inline-link">Farmakoterapia</a> (Szyta na miarę)</h3>
+    <p>Nowoczesna farmakoterapia nie opiera się na schematach „z pudełka". Jej podstawą jest <strong>multimodalność</strong> – łączenie
+      różnych grup leków, aby uzyskać maksymalny efekt przeciwbólowy przy minimalnych dawkach. Kluczowe są
+      bezpieczeństwo, unikanie interakcji i zapobieganie przewlekłym skutkom ubocznym.</p>
+
+    <h3><a href="#" class="inline-link">Blokady przeciwbólowe</a> (Leczenie u źródła bólu)</h3>
+    <p>To metoda „u źródła". Pod kontrolą USG precyzyjnie podaje się lek znieczulający i przeciwzapalny bezpośrednio
+      w okolicę uciśniętego nerwu lub bolącego stawu.</p>
+    <ul><li><strong>Zaleta:</strong> Natychmiastowa ulga i przerwanie „błędnego koła" bólu.</li></ul>
+
+    <h3><a href="#" class="inline-link">Kriolezja</a> (Nowoczesne mrożenie bólu)</h3>
+    <p>Innowacyjna metoda małoinwazyjna, polegająca na czasowym wyłączeniu przewodnictwa nerwowego poprzez działanie
+      niskiej temperatury (ok. –70°C).</p>
+    <ul><li><strong>Zaleta:</strong> Efekt utrzymuje się od kilku miesięcy do roku, nie uszkadzając struktury nerwu.
+      Idealna przy bólach kręgosłupa i nerwobóla</li></ul>
+
+    <h3><a href="#" class="inline-link">Termolezja</a> (Precyzyjne wyłączenie bólu temperaturą)</h3>
+    <p>Zaawansowana metoda małoinwazyjna wykorzystująca fale radiowe o wysokiej częstotliwości. Poprzez wytworzenie
+      kontrolowanej temperatury w otoczeniu zakończeń nerwowych, blokujemy przesyłanie sygnałów bólowych do mózgu.</p>
+    <ul><li><strong>Zaleta:</strong> Długotrwały efekt przeciwbólowy (nawet do kilkunastu miesięcy) przy bardzo wysokim
+      profilu bezpieczeństwa. Metoda najczęściej stosowana w bólach kręgosłupa, stawów biodrowych oraz bólach głowy
+      pochodzenia szyjnego.</li></ul>
+
+    <h3><a href="#" class="inline-link">Wlewy dożylne</a> (Kroplówki przeciwbólowe i regeneracyjne)</h3>
+    <p>Pozwalają na 100% przyswajalność substancji leczniczych z pominięciem układu pokarmowego. Stosuje się m.in.:</p>
+    <ul>
+      <li><strong>Wlewy z lidokainy:</strong> przy bólach neuropatycznych i fibromialgii.</li>
+      <li><strong>Koktajle witaminowe i magnezowe:</strong> wspomagające regenerację układu nerwowego i mięśniowego.</li>
+    </ul>
+
+    <h3><a href="#" class="inline-link">Kolagen i Kwas hialuronowy</a> (Regeneracja i „smarowanie")</h3>
+    <p>Metoda działa bezpośrednio na aparat ruchu, aby przywrócić mu sprawność mechaniczną:</p>
+    <ul>
+      <li><strong>Kolagen:</strong> wspiera odbudowę ścięgien, więzadeł i macierzy tkankowej.</li>
+      <li><strong>Kwas hialuronowy:</strong> działa jak „smar" w stawach, zmniejszając tarcie, amortyzując wstrząsy
+        i redukując ból przy każdym ruchu.</li>
+    </ul>
+    <p style="margin-top: 18px;">
+      <strong>Terapia bólu</strong> obejmuje zarówno podejście farmakologiczne, jak i niefarmakologiczne.
+      Specjaliści stosują różne leki przeciwbólowe, dobierając je w odpowiednich dawkach i kombinacjach, aby dostosować
+      terapię do indywidualnych potrzeb pacjenta. Stosuje się również terapie interwencyjne, takie jak blokady
+      nerwów, kriolezję czy wlewy dożylne.
+    </p>
+    <p>
+      W leczeniu bólu duży nacisk kładzie się również na podejście holistyczne i niefarmakologiczne. Pacjenci mogą skorzystać
+      z <a href="#" class="inline-link">fizjoterapii</a> i <a href="#" class="inline-link">rehabilitacji</a>, które mogą
+      pomóc w złagodzeniu napięcia mięśniowego i bólu. Pomocne bywa również
+      <a href="#" class="inline-link">wsparcie psychiatryczne</a>, bo problemy bólowe to często cierpienie nie tylko
+      fizyczne.
+    </p>
+
+    <h3><a href="#" class="inline-link">Fizjoterapia i Rehabilitacja</a></h3>
+    <p>Leki mogą wyciszyć ból, ale to ruch i terapia manualna „naprawiają" mechanikę organizmu. W leczeniu bólu fizjoterapia jest
+      fundamentem długofalowego sukcesu.</p>
+    <ul>
+      <li><strong>Terapia manualna:</strong> Praca nad mobilizacją stawów i tkanek miękkich, która pozwala uwolnić
+        uciśnięte struktury nerwowe i przywrócić naturalny zakres ruchu.</li>
+      <li><strong>Kinezyterapia:</strong> Opracowuje się indywidualne zestawy ćwiczeń wzmacniających „gorset mięśniowy",
+        co odciąża kręgosłup i zapobiega nawrotom dolegliwości.</li>
+      <li><strong>Edukacja ergonomiczna:</strong> Pacjent uczy się, jak siedzieć, spać i podnosić ciężary, aby nie prowokować
+        kolejnych epizodów bólowych.</li>
+    </ul>
+
+    <h3><a href="#" class="inline-link">Wsparcie Psychiatryczne</a></h3>
+    <p>Ból przewlekły to ogromne obciążenie dla układu nerwowego. Często prowadzi do tzw. <strong>błędnego koła
+      bólu</strong>, gdzie stres i lęk nasilają odczuwanie cierpienia fizycznego.</p>
+    <ul>
+      <li><strong>Leczenie współistniejących zaburzeń:</strong> Przewlekły ból często idzie w parze z depresją,
+        zaburzeniami snu czy stanami lękowymi. Specjaliści pomagają ustabilizować stan emocjonalny, co realnie
+        podnosi próg bólu pacjenta.</li>
+      <li><strong>Psychoedukacja:</strong> Zrozumienie mechanizmu bólu („dlaczego boli, skoro tkanka się wygoiła?") jest
+        kluczowe, by przestać się go bać i zacząć aktywnie z nim walczyć.</li>
+    </ul>
+
+    <p style="margin-top: 24px;">
+      Innym aspektem związanym z bólem są trudnogojące się rany – opisujemy <a href="#" class="inline-link">czyszczenie
+      i leczenie ran przewlekłych</a> z użyciem specjalistycznych narzędzi i opatrunków.
+    </p>
+    <p>
+      Pacjenci, którzy cierpią na choroby przewlekłe, nieuleczalne lub znajdują się w zaawansowanym stadium choroby mogą
+      liczyć na ulgę w bólu dzięki <a href="#" class="inline-link">medycynie paliatywnej</a>, co znacząco przyczynia się
+      do polepszenia ich samopoczucia.
+    </p>
+    <p>
+      Ból to nie tylko sygnał z układu nerwowego, ale często efekt złożonych procesów
+      tkankowych lub zaawansowanych stanów chorobowych. Dlatego ważnym elementem leczenia jest specjalistyczna opieka nad
+      ranami oraz wsparcie dla osób w najtrudniejszych etapach choroby.
+    </p>
+
+    <h3><a href="#" class="inline-link">Leczenie Ran Przewlekłych i Trudnogojących Się</a></h3>
+    <p>Rana, która nie goi się prawidłowo, staje się źródłem nieustannego, piekącego bólu i znaczącego dyskomfortu
+      psychicznego. W leczeniu podchodzi się do tego problemu procesowo, łącząc chirurgiczną precyzję z nowoczesną technologią.</p>
+    <ul>
+      <li><strong>Profesjonalne oczyszczanie:</strong> Usuwa się tkanki martwicze i biofilm bakteryjny, które są główną
+        barierą w procesie gojenia. Wykorzystuje się do tego specjalistyczne narzędzia, które minimalizują ból podczas
+        zabiegu.</li>
+      <li><strong>Dobór opatrunków aktywnych:</strong> Nie stosuje się zwykłych gazików. Dobiera się opatrunki specjalistyczne
+        (srebro, hydrokoloidy, alginiany, pianki poliuretanowe), które utrzymują optymalne środowisko wilgotne,
+        przyspieszają ziarnicowanie i działają przeciwbakteryjnie.</li>
+      <li><strong>Leczenie bólu towarzyszącego:</strong> W leczeniu bólu szczególną wagę przywiązuje się do
+        tego, aby proces zmiany opatrunków i samo gojenie przebiegało przy maksymalnym komforcie pacjenta (stosuje się
+        znieczulenia miejscowe i odpowiednią farmakoterapię).</li>
+      <li><strong>Terapia ran:</strong> owrzodzenia podudzi, stopa cukrzycowa, odleżyny oraz rany pooperacyjne
+        z powikłaniami.</li>
+    </ul>
+
+    <h3><a href="#" class="inline-link">Medycyna Paliatywna</a>: Godność i Komfort</h3>
+    <p>W sytuacjach, gdy choroby nie można już wyleczyć, priorytetem staje się <strong>jakość życia</strong>.
+      Medycyna paliatywna to misja przynoszenia ulgi wtedy, gdy jest ona najbardziej potrzebna.</p>
+    <ul>
+      <li><strong>Skuteczne uśmierzanie bólu:</strong> Wykorzystuje się pełną drabinę analgetyczną WHO, w tym nowoczesne
+        systemy transdermalne (plastry), pompy infuzyjne oraz techniki interwencyjne, aby opanować nawet najsilniejszy
+        ból nowotworowy.</li>
+      <li><strong>Łagodzenie objawów towarzyszących:</strong> Leczenie skupia się na niwelowaniu duszności, nudności, braku
+        apetytu czy lęku, które często towarzyszą zaawansowanym stadiom chorób.</li>
+      <li><strong>Podejście „Total Pain":</strong> Rozumiemy, że cierpienie w chorobie nieuleczalnej ma wymiar fizyczny,
+        psychiczny i społeczny. Zespół terapeutyczny dba o to, by pacjent czuł się zaopiekowany jako człowiek, a nie tylko jako
+        „przypadek medyczny".</li>
+      <li><strong>Wsparcie dla bliskich:</strong> Rodziny są edukowane w zakresie opieki nad chorym, co pomaga im przejść
+        przez ten trudny czas z poczuciem bezpieczeństwa i wsparcia merytorycznego.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="faq">
+  <div class="faq-wrap">
+    <h2>Często zadawane pytania</h2>
+    <div class="faq-item">
+      <button class="faq-q">Jak przygotować się do wizyty w poradni leczenia bólu?</button>
+      <div class="faq-a">
+        <p>Warto zabrać ze sobą dotychczasową dokumentację medyczną – wyniki badań obrazowych (RTG, MRI, USG), opisy
+          wcześniejszych konsultacji, listę przyjmowanych leków oraz krótki opis charakterystyki bólu (kiedy się
+          pojawia, jak długo trwa, co go nasila i łagodzi).</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Czym charakteryzuje się leczenie w poradni leczenia bólu?</button>
+      <div class="faq-a">
+        <p>Leczenie w poradni leczenia bólu opiera się na interdyscyplinarnym podejściu – łączymy farmakoterapię,
+          metody interwencyjne (blokady, kriolezja, termolezja), fizjoterapię i wsparcie psychologiczne, dobierając
+          każdą terapię indywidualnie do pacjenta.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Na czym polega zabieg kriolezji?</button>
+      <div class="faq-a">
+        <p>Kriolezja to małoinwazyjna metoda przerywania przewodnictwa nerwowego za pomocą bardzo niskiej temperatury
+          (ok. –70°C). Zabieg wykonuje się pod kontrolą obrazową – przezskórnie wprowadzamy sondę do okolicy nerwu
+          odpowiedzialnego za przewodzenie bólu i kontrolowanie ją schładzamy.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Jaka jest skuteczność kriolezji?</button>
+      <div class="faq-a">
+        <p>U większości pacjentów efekt przeciwbólowy utrzymuje się od kilku miesięcy do roku, a w wybranych
+          przypadkach nawet dłużej. Skuteczność zależy od źródła bólu, kwalifikacji do zabiegu oraz przebiegu
+          rekonwalescencji.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Kiedy stosować medycynę paliatywną?</button>
+      <div class="faq-a">
+        <p>Medycyna paliatywna znajduje zastosowanie u pacjentów z chorobami przewlekłymi, postępującymi i ograniczającymi
+          życie. Jej celem jest złagodzenie bólu i innych dokuczliwych objawów oraz zapewnienie najwyższej możliwej
+          jakości życia pacjentowi i jego rodzinie.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="closing">
+    Ból, niezależnie od intensywności, może znacząco wpłynąć na Twoje samopoczucie i codzienne funkcjonowanie. Nie
+    bagatelizuj go i nie próbuj leczyć się samodzielnie. Wizyta u doświadczonego specjalisty pozwoli na precyzyjne
+    zdiagnozowanie problemu i wdrożenie skutecznego leczenia, co pozwoli Ci odzyskać radość życia.
+  </p>
+</section>
+
+<!-- ===================== LOCATIONS ===================== -->
+<div class="locations">
+  <a href="#">Śródmieście</a>, <a href="#">Praga-Północ</a>, <a href="#">Praga-Południe</a>, <a href="#">Targówek</a>,
+  <a href="#">Mokotów</a>, <a href="#">Żoliborz</a>, <a href="#">Wola</a>, <a href="#">Ochota</a>, <a href="#">Bemowo</a>,
+  <a href="#">Wawer</a>, <a href="#">Rembertów</a>, <a href="#">Ursynów</a>, <a href="#">Wilanów</a>, <a href="#">Białołęka</a>,
+  <a href="#">Ursus</a>, <a href="#">Wawer</a>, <a href="#">Wesoła</a>, <a href="#">Bielany</a>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer id="kontakt">
+  <div class="footer-grid">
+    <div>
+      <a href="#" class="logo">
+        <img src="images/KOI_logo.png" alt="KOI Centrum Leczenia Bólu" class="logo-img">
+      </a>
+    </div>
+    <div class="footer-contact">
+      <p>Warszawa</p>
+      <p><a href="tel:+48572494330">+48 572 494 330</a></p>
+      <p><a href="mailto:kontakt@koi.waw.pl">kontakt@koi.waw.pl</a></p>
+    </div>
+    <div>
+      <ul>
+        <li><a href="index.html#dolegliwosci-bolowe">Dolegliwości</a></li>
+        <li><a href="index.html#terapia">Terapia</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <div class="icons">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.6V9.8c0-2.6 1.5-4 3.9-4 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.9.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.9.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.9-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.9-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.2.4-.3 1-.4 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.2-1-.3-2.1-.4C15.5 4 15.1 4 12 4zm0 3.1A4.9 4.9 0 1 1 12 17a4.9 4.9 0 0 1 0-9.9zm0 8.1a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm5.1-8.3a1.1 1.1 0 1 1 0-2.3 1.1 1.1 0 0 1 0 2.3z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3v9zM6.5 8.3a1.7 1.7 0 1 1 0-3.5 1.7 1.7 0 0 1 0 3.5zM19 19h-3v-4.7c0-1.1 0-2.6-1.6-2.6S12.6 13 12.6 14.2V19h-3v-9h2.9v1.2h.1a3.1 3.1 0 0 1 2.8-1.5c3 0 3.6 2 3.6 4.6V19z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.7-1.7C18.3 5 12 5 12 5s-6.3 0-7.9.5A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.7 1.7C5.7 19 12 19 12 19s6.3 0 7.9-.5a2.5 2.5 0 0 0 1.7-1.7c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5 3-5 3z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ===================== Mobile menu ===================== */
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+menuToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('open');
+});
+
+/* close menu when a link is clicked */
+navMenu.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', (e) => {
+    const isMobile = window.innerWidth <= 980;
+    const parent = a.parentElement;
+    const isSubmenuParent = parent.classList.contains('has-sub') || parent.classList.contains('has-sub2');
+    if (isMobile && isSubmenuParent) {
+      // Tap on parent: toggle this submenu; close only siblings at the same level
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      [...parent.parentElement.children].forEach(sib => { if (sib !== parent) sib.classList.remove('open'); });
+      parent.classList.toggle('open');
+      return;
+    }
+    // Normal link tap on mobile: close the panel
+    if (isMobile) navMenu.classList.remove('open');
+  });
+});
+
+
+/* ===================== FAQ accordion ===================== */
+document.querySelectorAll('.faq-item').forEach(item => {
+  const q = item.querySelector('.faq-q');
+  q.addEventListener('click', () => {
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(x => x.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+
+/* ===================== Active link on scroll ===================== */
+const sections = document.querySelectorAll('section[id]');
+const links = document.querySelectorAll('.nav-menu > li > a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(sec => {
+    const top = sec.offsetTop - 100;
+    if (window.scrollY >= top) current = sec.id;
+  });
+  links.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+  });
+});
+
+/* ===================== Smooth reveal on scroll ===================== */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.ailment-card, .method-card').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity .5s ease, transform .5s ease';
+  observer.observe(el);
+});
+</script>
+</body>
+
+</html>

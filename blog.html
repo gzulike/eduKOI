@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blog – Portal Edukacyjny KOI</title>
+<meta name="description" content="Blog Portalu Edukacyjnego KOI – artykuły o bólu przewlekłym, metodach leczenia, terapiach przeciwbólowych i dolegliwościach bólowych." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.blog-hero { background: var(--teal-light, #e6f4f4); padding: 48px 24px 36px; text-align: center; }
+.blog-hero h1 { font-size: clamp(28px, 3.6vw, 40px); font-weight: 700; color: var(--text); margin: 0 0 10px; }
+.blog-hero p { color: var(--text-soft, #374151); font-size: 16px; max-width: 680px; margin: 0 auto; }
+.blog-wrap { max-width: var(--max, 1240px); margin: 0 auto; padding: 48px 24px 80px; }
+.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.blog-card {
+  display: flex; flex-direction: column;
+  background: #fff; border: 1px solid var(--border, #E5E7EB);
+  border-radius: 14px; overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,.05);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.blog-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,.10); }
+.blog-card-img { display: block; aspect-ratio: 16 / 9; overflow: hidden; background: #f0f0f0; }
+.blog-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s ease; }
+.blog-card:hover .blog-card-img img { transform: scale(1.04); }
+.blog-card-body { display: flex; flex-direction: column; flex: 1; padding: 20px 22px 24px; }
+.blog-card-date { font-size: 13px; color: var(--muted, #6B7280); margin-bottom: 8px; }
+.blog-card-title { font-size: 19px; line-height: 1.3; font-weight: 700; margin: 0 0 10px; }
+.blog-card-title a { color: var(--text); text-decoration: none; }
+.blog-card-title a:hover { color: var(--teal-dark, #1b7d7d); }
+.blog-card-excerpt {
+  font-size: 15px; color: var(--text-soft, #374151); margin: 0 0 20px;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.blog-card-btn {
+  margin-top: auto; align-self: flex-start;
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 44px; box-sizing: border-box;
+  padding: 8px 18px; border-radius: 22px;
+  background: #fff; color: var(--text);
+  box-shadow: 0 2px 10px rgba(0,0,0,.15);
+  font-size: 14px; font-weight: 600; text-decoration: none;
+  transition: color .15s ease, transform .15s ease;
+}
+.blog-card-btn:hover { color: var(--teal); transform: translateY(-1px); }
+@media (max-width: 980px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) { .blog-grid { grid-template-columns: 1fr; } }
+</style>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+<header class="header">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo" aria-label="Portal Edukacyjny KOI">
+      <img src="images/KOI_logo.png" alt="KOI Centrum Leczenia Bólu" class="logo-img">
+    </a>
+
+    <nav>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Start</a></li>
+        <li class="has-sub"><a href="index.html#dolegliwosci-bolowe">Dolegliwości</a>
+          <ul class="sub">
+            <li class="has-sub2"><a href="dolegliwosci/kregoslup-plecy.html">Kręgosłup i plecy</a>
+              <ul class="sub2">
+                <li><a href="dolegliwosci/bol-kregoslupa.html">Ból kręgosłupa</a></li>
+                <li><a href="dolegliwosci/rwa-kulszowa.html">Rwa kulszowa</a></li>
+                <li><a href="dolegliwosci/przepuklina-kregoslupa.html">Przepuklina kręgosłupa</a></li>
+                <li><a href="dolegliwosci/dyskopatia.html">Choroby krążków międzykręgowych (dyskopatia)</a></li>
+                <li><a href="dolegliwosci/rwa-udowa.html">Rwa udowa</a></li>
+                <li><a href="dolegliwosci/kregozmyk.html">Kręgozmyk</a></li>
+                <li><a href="dolegliwosci/bol-plecow.html">Ból pleców</a></li>
+                <li><a href="dolegliwosci/bol-szyi.html">Ból szyi (odcinek szyjny kręgosłupa)</a></li>
+                <li><a href="dolegliwosci/bole-korzeniowe.html">Bóle korzeniowe</a></li>
+              </ul>
+            </li>
+            <li class="has-sub2"><a href="dolegliwosci/glowa-twarz.html">Głowa i twarz</a>
+              <ul class="sub2">
+                <li><a href="dolegliwosci/bol-glowy.html">Ból głowy</a></li>
+                <li><a href="dolegliwosci/klasterowy-bol-glowy.html">Klasterowy ból głowy</a></li>
+                <li><a href="dolegliwosci/migrena.html">Migrena</a></li>
+                <li><a href="dolegliwosci/bol-twarzy.html">Ból twarzy</a></li>
+                <li><a href="dolegliwosci/porazenie-nerwu-twarzowego.html">Porażenie nerwu twarzowego</a></li>
+                <li><a href="dolegliwosci/neuralgia-nerwu-trojdzielnego.html">Neuralgia nerwu trójdzielnego</a></li>
+                <li><a href="dolegliwosci/napieciowy-bol-glowy.html">Napięciowy ból głowy</a></li>
+                <li><a href="dolegliwosci/popunkcyjne-bole-glowy.html">Popunkcyjne bóle głowy</a></li>
+              </ul>
+            </li>
+            <li class="has-sub2"><a href="dolegliwosci/stawy-miesnie-konczyny.html">Stawy, mięśnie, kończyny</a>
+              <ul class="sub2">
+                <li><a href="dolegliwosci/bole-reumatyczne.html">Bóle reumatyczne</a></li>
+                <li><a href="dolegliwosci/bole-stawow.html">Bóle stawów</a></li>
+                <li><a href="dolegliwosci/bole-konczyn.html">Bóle kończyn</a></li>
+                <li><a href="dolegliwosci/zespol-ciesni-nadgarstka.html">Zespół cieśni nadgarstka</a></li>
+                <li><a href="dolegliwosci/bol-barku.html">Ból barku</a></li>
+                <li><a href="dolegliwosci/bol-kolan.html">Ból kolan</a></li>
+                <li><a href="dolegliwosci/bark-zamrozony.html">Bark zamrożony</a></li>
+                <li><a href="dolegliwosci/bole-miesni.html">Bóle mięśni</a></li>
+                <li><a href="dolegliwosci/fibromialgia.html">Fibromialgia</a></li>
+                <li><a href="dolegliwosci/lokiec-tenisisty-i-golfisty.html">Łokieć tenisisty i golfisty</a></li>
+                <li><a href="dolegliwosci/spastycznosc-przykurcze-leczenie.html">Przykurcze, spastyczność, klonus</a></li>
+                <li><a href="dolegliwosci/rany-przewlekle.html">Rany przewlekłe</a></li>
+              </ul>
+            </li>
+            <li class="has-sub2"><a href="dolegliwosci/urazy-operacje-nowotwory.html">Urazy, operacje, nowotwory</a>
+              <ul class="sub2">
+                <li><a href="dolegliwosci/bol-pooperacyjny-leczenie.html">Ból pooperacyjny</a></li>
+                <li><a href="dolegliwosci/bol-po-urazie.html">Ból po urazie</a></li>
+                <li><a href="dolegliwosci/bol-fantomowy.html">Ból fantomowy</a></li>
+                <li><a href="dolegliwosci/bol-nowotworowy.html">Ból nowotworowy</a></li>
+              </ul>
+            </li>
+            <li class="has-sub2"><a href="dolegliwosci/uklad-nerwowy.html">Układ nerwowy</a>
+              <ul class="sub2">
+                <li><a href="dolegliwosci/bol-w-chorobach-neurologicznych.html">Ból w chorobach neurologicznych</a></li>
+                <li><a href="dolegliwosci/polineuropatia.html">Polineuropatia</a></li>
+                <li><a href="dolegliwosci/nerwobole.html">Nerwobóle</a></li>
+                <li><a href="dolegliwosci/bole-korzeniowe.html">Bóle korzeniowe</a></li>
+                <li><a href="dolegliwosci/neuralgia-polpascowa.html">Neuralgia półpaścowa</a></li>
+                <li><a href="dolegliwosci/neuralgia-nerwu-trojdzielnego.html">Neuralgia nerwu trójdzielnego</a></li>
+                <li><a href="dolegliwosci/neuropatia-cukrzycowa.html">Neuropatia cukrzycowa</a></li>
+                <li><a href="dolegliwosci/fibromialgia.html">Fibromialgia</a></li>
+                <li><a href="dolegliwosci/bol-po-udarze-mozgu.html">Ból po udarze mózgu</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="has-sub"><a href="index.html#terapia">Terapia</a>
+          <ul class="sub">
+            <li><a href="terapia/blokady-przeciwbolowe.html">Blokady przeciwbólowe</a></li>
+            <li><a href="terapia/farmakoterapia-przeciwbolowa.html">Farmakoterapia przeciwbólowa</a></li>
+            <li><a href="terapia/fizjoterapia-terapia-manualna.html">Fizjoterapia i terapia manualna</a></li>
+            <li><a href="terapia/kolagen-kwas-hialuronowy.html">Kolagen i kwas hialuronowy</a></li>
+            <li><a href="terapia/kriolezja.html">Kriolezja</a></li>
+            <li><a href="terapia/leczenie-ran-przewleklych.html">Leczenie ran przewlekłych</a></li>
+            <li><a href="terapia/medycyna-paliatywna.html">Medycyna paliatywna</a></li>
+            <li><a href="terapia/psychiatra.html">Pomoc psychiatryczna</a></li>
+            <li><a href="terapia/termolezja.html">Termolezja</a></li>
+            <li><a href="terapia/wlewy-dozylne.html">Wlewy dożylne</a></li>
+          </ul>
+        </li>
+        <li class="has-sub"><a href="blog.html">Blog</a>
+          <ul class="sub">
+            <li><a href="blog/bol-przewlekly-w-polsce-cicha-epidemia-ktora-dotyka-miliony.html">Ból przewlekły w Polsce</a></li>
+            <li><a href="blog/fibromialgia-gdy-boli-cale-cialo.html">Fibromialgia</a></li>
+            <li><a href="blog/jak-zlagodzic-bol-po-udarze.html">Jak złagodzić ból po udarze?</a></li>
+            <li><a href="blog/leczenie-choroby-zwyrodnieniowej-kolana-zastrzykami-z-glukozy.html">Leczenie choroby zwyrodnieniowej kolana zastrzykami z glukozy</a></li>
+            <li><a href="blog/leczenie-popunkcyjnych-bolow-glowy.html">Leczenie popunkcyjnych bólów głowy</a></li>
+            <li><a href="blog/rodzaje-blokad-przeciwbolowych.html">Rodzaje blokad przeciwbólowych</a></li>
+            <li><a href="blog/schorzenia-kregoslupa-powszechny-problem-xxi-wieku.html">Schorzenia kręgosłupa</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="blog-hero">
+  <h1>Blog</h1>
+  <p>Artykuły o bólu, jego przyczynach i metodach leczenia – przystępnie i rzetelnie.</p>
+</section>
+
+<main class="blog-wrap">
+  <div class="blog-grid">
+      <article class="blog-card">
+        <a class="blog-card-img" href="blog/schorzenia-kregoslupa-powszechny-problem-xxi-wieku.html">
+          <img src="images/Kregoslup-kopia.webp" alt="Schorzenia kręgosłupa – powszechny problem XXI wieku" loading="lazy">
+        </a>
+        <div class="blog-card-body">
+          <div class="blog-card-date">09 marca 2026</div>
+          <h2 class="blog-card-title"><a href="blog/schorzenia-kregoslupa-powszechny-problem-xxi-wieku.html">Schorzenia kręgosłupa – powszechny problem XXI wieku</a></h2>
+          <p class="blog-card-excerpt">W dzisiejszych czasach, gdy większość z nas spędza długie godziny przed komputerem, a aktywność fizyczna często schodzi na dalszy plan, problemy z kręgosłupem stały się niemalże chorobą cywilizacyjną. Ból pleców, sztywność karku, rwa kulszowa – to dolegliwości dotykające miliony osób.</p>
+          <a class="blog-card-btn" href="blog/schorzenia-kregoslupa-powszechny-problem-xxi-wieku.html">Czytaj więcej</a>
+        </div>
+      </article>
+      <article class="blog-card">
+        <a class="blog-card-img" href="blog/leczenie-popunkcyjnych-bolow-glowy.html">
+          <img src="images/bol-glowy-kopia.webp" alt="Leczenie popunkcyjnych bólów głowy" loading="lazy">
+        </a>
+        <div class="blog-card-body">
+          <div class="blog-card-date">12 stycznia 2026</div>
+          <h2 class="blog-card-title"><a href="blog/leczenie-popunkcyjnych-bolow-glowy.html">Leczenie popunkcyjnych bólów głowy</a></h2>
+          <p class="blog-card-excerpt">Ból głowy to jedna z najczęstszych dolegliwości, jakich doświadcza ludzkość. Traktujemy go często jako rutynową niedogodność, sygnał zmęczenia lub stresu. Istnieje jednak pewien szczególny, wyjątkowo dotkliwy rodzaj bólu głowy.</p>
+          <a class="blog-card-btn" href="blog/leczenie-popunkcyjnych-bolow-glowy.html">Czytaj więcej</a>
+        </div>
+      </article>
+      <article class="blog-card">
+        <a class="blog-card-img" href="blog/bol-przewlekly-w-polsce-cicha-epidemia-ktora-dotyka-miliony.html">
+          <img src="images/Epidemia-bolu.webp" alt="Ból przewlekły w Polsce – cicha epidemia, która dotyka miliony" loading="lazy">
+        </a>
+        <div class="blog-card-body">
+          <div class="blog-card-date">15 grudnia 2025</div>
+          <h2 class="blog-card-title"><a href="blog/bol-przewlekly-w-polsce-cicha-epidemia-ktora-dotyka-miliony.html">Ból przewlekły w Polsce – cicha epidemia, która dotyka miliony</a></h2>
+          <p class="blog-card-excerpt">Ból. Każdy z nas doświadczył go choć raz w życiu. Zazwyczaj jest sygnałem ostrzegawczym, informującym o urazie lub chorobie. Co jednak, gdy ból nie ustępuje przez tygodnie, miesiące, a nawet lata?</p>
+          <a class="blog-card-btn" href="blog/bol-przewlekly-w-polsce-cicha-epidemia-ktora-dotyka-miliony.html">Czytaj więcej</a>
+        </div>
+      </article>
+      <article class="blog-card">
+        <a class="blog-card-img" href="blog/rodzaje-blokad-przeciwbolowych.html">
+          <img src="images/blokady-przeciwbolowe-kopia.webp" alt="Rodzaje blokad przeciwbólowych" loading="lazy">
+        </a>
+        <div class="blog-card-body">
+          <div class="blog-card-date">02 listopada 2025</div>
+          <h2 class="blog-card-title"><a href="blog/rodzaje-blokad-przeciwbolowych.html">Rodzaje blokad przeciwbólowych</a></h2>
+          <p class="blog-card-excerpt">W poradniach leczenia bólu stosuje się szeroki wachlarz blokad, które są dostosowane do rodzaju, przyczyny i lokalizacji dolegliwości. Poniżej przedstawiamy najczęściej stosowane rodzaje blokad przeciwbólowych.</p>
+          <a class="blog-card-btn" href="blog/rodzaje-blokad-przeciwbolowych.html">Czytaj więcej</a>
+        </div>
+      </article>
+      <article class="blog-card">
+        <a class="blog-card-img" href="blog/fibromialgia-gdy-boli-cale-cialo.html">
+          <img src="images/Fibromialgia-kopia.webp" alt="Fibromialgia - gdy boli całe ciało" loading="lazy">
+        </a>
+        <div class="blog-card-body">
+          <div class="blog-card-date">16 października 2025</div>
+          <h2 class="blog-card-title"><a href="blog/fibromialgia-gdy-boli-cale-cialo.html">Fibromialgia - gdy boli całe ciało</a></h2>
+          <p class="blog-card-excerpt">Fibromialgia to przewlekła choroba, która powoduje silny ból mięśni i stawów, zmęczenie, zaburzenia snu i problemy z pamięcią i koncentracją. Prawdopodobnie jest związana z nadwrażliwością układu nerwowego.</p>
+          <a class="blog-card-btn" href="blog/fibromialgia-gdy-boli-cale-cialo.html">Czytaj więcej</a>
+        </div>
+      </article>
+      <article class="blog-card">
+        <a class="blog-card-img" href="blog/jak-zlagodzic-bol-po-udarze.html">
+          <img src="images/Bol-po-udarze-kopia.webp" alt="Jak złagodzić ból po udarze?" loading="lazy">
+        </a>
+        <div class="blog-card-body">
+          <div class="blog-card-date">10 września 2025</div>
+          <h2 class="blog-card-title"><a href="blog/jak-zlagodzic-bol-po-udarze.html">Jak złagodzić ból po udarze?</a></h2>
+          <p class="blog-card-excerpt">Około 30% osób, które przeszły udar, doświadcza bólu jako jedno z potencjalnych następstw tej nagłej choroby. Ból po udarze może pojawić się zaraz po zdarzeniu, ale także w późniejszym okresie.</p>
+          <a class="blog-card-btn" href="blog/jak-zlagodzic-bol-po-udarze.html">Czytaj więcej</a>
+        </div>
+      </article>
+      <article class="blog-card">
+        <a class="blog-card-img" href="blog/leczenie-choroby-zwyrodnieniowej-kolana-zastrzykami-z-glukozy.html">
+          <img src="images/Kriolezja-kolana.webp" alt="Leczenie choroby zwyrodnieniowej kolana zastrzykami z glukozy" loading="lazy">
+        </a>
+        <div class="blog-card-body">
+          <div class="blog-card-date">23 lipca 2025</div>
+          <h2 class="blog-card-title"><a href="blog/leczenie-choroby-zwyrodnieniowej-kolana-zastrzykami-z-glukozy.html">Leczenie choroby zwyrodnieniowej kolana zastrzykami z glukozy</a></h2>
+          <p class="blog-card-excerpt">Zastrzyki z glukozy (nazywane proloterapią) to bezpieczna metoda leczenia bólu i zwyrodnienia stawu kolanowego. Polega na wstrzykiwaniu roztworu glukozy w okolice bolącego kolana.</p>
+          <a class="blog-card-btn" href="blog/leczenie-choroby-zwyrodnieniowej-kolana-zastrzykami-z-glukozy.html">Czytaj więcej</a>
+        </div>
+      </article>
+  </div>
+</main>
+<footer id="kontakt">
+  <div class="footer-grid">
+    <div>
+      <a href="#" class="logo">
+        <img src="images/KOI_logo.png" alt="KOI Centrum Leczenia Bólu" class="logo-img">
+      </a>
+    </div>
+    <div class="footer-contact">
+      <p>Warszawa</p>
+      <p><a href="tel:+48572494330">+48 572 494 330</a></p>
+      <p><a href="mailto:kontakt@koi.waw.pl">kontakt@koi.waw.pl</a></p>
+    </div>
+    <div>
+      <ul>
+        <li><a href="index.html#dolegliwosci-bolowe">Dolegliwości</a></li>
+        <li><a href="index.html#terapia">Terapia</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <div class="icons">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.6V9.8c0-2.6 1.5-4 3.9-4 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.9.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.9.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.9-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.9-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.2.4-.3 1-.4 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.2-1-.3-2.1-.4C15.5 4 15.1 4 12 4zm0 3.1A4.9 4.9 0 1 1 12 17a4.9 4.9 0 0 1 0-9.9zm0 8.1a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm5.1-8.3a1.1 1.1 0 1 1 0-2.3 1.1 1.1 0 0 1 0 2.3z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3v9zM6.5 8.3a1.7 1.7 0 1 1 0-3.5 1.7 1.7 0 0 1 0 3.5zM19 19h-3v-4.7c0-1.1 0-2.6-1.6-2.6S12.6 13 12.6 14.2V19h-3v-9h2.9v1.2h.1a3.1 3.1 0 0 1 2.8-1.5c3 0 3.6 2 3.6 4.6V19z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.7-1.7C18.3 5 12 5 12 5s-6.3 0-7.9.5A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.7 1.7C5.7 19 12 19 12 19s6.3 0 7.9-.5a2.5 2.5 0 0 0 1.7-1.7c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5 3-5 3z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+if (menuToggle && navMenu) {
+  menuToggle.addEventListener('click', () => navMenu.classList.toggle('open'));
+  navMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const isMobile = window.innerWidth <= 980;
+      const parent = a.parentElement;
+      const isSubmenuParent = parent.classList.contains('has-sub') || parent.classList.contains('has-sub2');
+      if (isMobile && isSubmenuParent) {
+        e.preventDefault(); e.stopImmediatePropagation();
+        [...parent.parentElement.children].forEach(sib => { if (sib !== parent) sib.classList.remove('open'); });
+        parent.classList.toggle('open');
+        return;
+      }
+      if (isMobile) navMenu.classList.remove('open');
+    });
+  });
+}
+</script>
+</body>
+</html>
